@@ -19,7 +19,7 @@ var Stack = function() {
   };
 
   someInstance.size = function() {
-    return Object.keys(storage).length
+    return Object.keys(storage).length;
   };
 
   return someInstance;
