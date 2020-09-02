@@ -9,12 +9,13 @@ var LinkedList = function() {
       list.head = val;
       list.tail = val;
     } else {
-      list.tail.next = value;
+      list.tail.next = val;
       list.tail = val;
     }
   };
 
   list.removeHead = function() {
+
   };
 
   list.contains = function(target) {
