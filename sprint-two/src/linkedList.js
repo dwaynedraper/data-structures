@@ -15,10 +15,26 @@ var LinkedList = function() {
   };
 
   list.removeHead = function() {
-
+    let val = list.head.value;
+    list.head = list.head.next;
+    return val;
   };
 
   list.contains = function(target) {
+    let findValue = function(node) {
+      console.log('target: ', target);
+      console.log('node: ', node);
+      console.log('value: ', node.value);
+      console.log('next: ', node.next);
+      if (node.value === target) {
+        return true;
+      } else if (node.next === null) {
+        return false;
+      } else {
+        return findValue(node.next);
+      }
+    };
+    return findValue(list.head);
   };
 
   return list;
