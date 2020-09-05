@@ -17,9 +17,11 @@ setPrototype.contains = function(item) {
 };
 
 setPrototype.remove = function(item) {
-
+  let filtered = this._storage.filter(el => el !== item);
+  this._storage = filtered;
 };
 
 /*
  * Complexity: What is the time complexity of the above functions?
+  All three functions have linear time complexity, as all items in the storage array must be checked before running the operation.
  */
