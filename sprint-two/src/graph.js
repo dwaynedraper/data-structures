@@ -81,6 +81,22 @@ Graph.prototype.forEachNode = function(cb) {
 
 /*
  * Complexity: What is the time complexity of the above functions?
+
+ addNode() has a constant time lookup, because it just gets tacked on the end of the graph.
+
+contains() has a linear time lookup because it traverses the array and checks each element for a truth test
+
+removeNode() has a linear time lookup because it traverses the array to find the node to remove
+
+hasEdge() has a linear time lookup because it traverses the array to find the node it needs to check for edges
+
+addEdge() has a linear time lookup because it traverses the array to find the node it needs to add an edge to
+
+removeEdge() has a linear time complexity because it runs an
+index lookup function which iterates over all nodes
+
+forEachNode() has a linear time complexity because it iterates over the list and calls the callback function
+
  */
 
 
