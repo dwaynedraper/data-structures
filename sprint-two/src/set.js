@@ -18,6 +18,11 @@ setPrototype.remove = function(item) {
   delete this._storage[item];
 };
 
+setPrototype.clear = function() {
+  this._storage = {};
+  return this._storage;
+};
+
 /*
  * Complexity: What is the time complexity of the above functions?
   All three functions have constant time complexity as we're using object lookup for each function.
