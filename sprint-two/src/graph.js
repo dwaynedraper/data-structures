@@ -107,6 +107,8 @@ index lookup function which iterates over all nodes
 
 forEachNode() has a linear time complexity because it iterates over the list and calls the callback function
 
+hasOrphans() has a linear time complexity because it checks each node once for edges.
+
  */
 
 

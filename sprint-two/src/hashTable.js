@@ -25,7 +25,15 @@ HashTable.prototype.remove = function(k) {
   this._storage.set(index, obj);
 };
 
-
+HashTable.prototype.count = function() {
+  let entryCount = 0;
+  for (let i = 0; i < this._limit; i++) {
+    let obj = this._storage.get(i) || {};
+    entryCount += Object.keys(obj).length;
+  }
+  console.log(entryCount);
+  return entryCount;
+};
 
 /*
  * Complexity: What is the time complexity of the above functions?
