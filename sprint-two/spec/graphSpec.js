@@ -68,4 +68,16 @@ describe('graph', function() {
     expect(graph.hasEdge(3, 5)).to.equal(true);
     expect(graph.hasEdge(5, 5)).to.equal(true);
   });
+
+  it('should return any orphan nodes in an array', function() {
+    graph.addNode(5);
+    graph.addNode(4);
+    graph.addNode(3);
+    graph.addNode(51092384);
+    graph.addNode(61092384);
+    graph.addEdge(5, 4);
+    graph.addEdge(4, 3);
+    graph.addEdge(5, 3);
+    expect(graph.hasOrphans()).to.eql([51092384, 61092384]);
+  });
 });

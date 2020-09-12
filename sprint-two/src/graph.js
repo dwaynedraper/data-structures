@@ -79,6 +79,16 @@ Graph.prototype.forEachNode = function(cb) {
   }
 };
 
+Graph.prototype.hasOrphans = function() {
+  let orphans = [];
+  _.each(this.nodes, node => {
+    if (node.edges.length === 0) {
+      orphans.push(node.value);
+    }
+  });
+  return orphans;
+};
+
 /*
  * Complexity: What is the time complexity of the above functions?
 
