@@ -58,3 +58,4 @@ treeMethods.depthFirstLog = function(cb) {
 // Searching with contains is O(n) with n being the height of the tree because at every juncture it will only go left or right, and it never goes back up. Insert also follows the same logic
 // depthFirstLog has a time complexity of O(n) where n is the number of total nodes, because the callback has to run once for every single node.
 //  */
+
