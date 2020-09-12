@@ -24,6 +24,14 @@ treeMethods.contains = function(target) {
   return _.some(this.children, (el) => el.contains(target));
 };
 
+treeMethods.remove = function(value) {
+  if (this.value === value) {
+    this.value = null;
+    this.children = [];
+  }
+  return _.some(this.children, (el) => el.remove(value));
+};
+
 /*
  * Complexity: What is the time complexity of the above functions?
   The time complexity of addChild is O(1).
