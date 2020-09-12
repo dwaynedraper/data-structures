@@ -51,5 +51,12 @@ describe('linkedList', function() {
     expect(linkedList.contains(4)).to.equal(false);
   });
 
+  it('should return a comma separated string of all values in the list', function() {
+    linkedList.addToTail(1);
+    linkedList.addToTail(14);
+    linkedList.addToTail(3);
+    expect(linkedList.toString()).to.equal('1, 14, 3');
+  });
+
   // add more tests here to test the functionality of linkedList
 });

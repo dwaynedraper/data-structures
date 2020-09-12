@@ -33,8 +33,21 @@ var LinkedList = function() {
     return findValue(list.head);
   };
 
+  list.toString = function() {
+    let string = '';
+    let current = list.head;
+    string += current.value + ', ';
+    while (current.next !== null) {
+      current = current.next;
+      string += current.value + ', ';
+    }
+    let copy = string.slice(0, string.length - 2);
+    return copy;
+  };
+
   return list;
 };
+
 
 var Node = function(value) {
   var node = {};
@@ -49,5 +62,5 @@ var Node = function(value) {
 * Complexity: What is the time complexity of the above functions?
 The time complexity of addToTail and removeHead are both o(1) because we do not have to do any searching. List.head and list.tail are both kept in memory to add efficiency. It is simply inserting or deleting. If we had to search first, it would become O(n).
 The time complexity of contains is O(n) as we are iterating through each node of the Linked List searching for a specific value. Best case is time complexity O(1) if the first node's value is the target.
-
+The time complexity of toString is linear because we go through each value once to add it to the list.
 */
